@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KielApp.homePage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#FFA15B">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Image 
+                Source="twicefullpic.png" 
+                HeightRequest="250"
+                Margin="30,20"
+                Aspect="AspectFill">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer 
+                        Tapped="OnGroupImageTapped" />
+                </Image.GestureRecognizers>
+            </Image>
+            <HorizontalStackLayout
+                HorizontalOptions="Center">
+                <Label 
+                    Text="트와이스" 
+                    VerticalTextAlignment="End"
+                    FontSize="15" 
+                    TextColor="Black"
+                    FontAttributes="Bold" 
+                    HorizontalOptions="Center" />
+                <Label 
+                    Text="TWICE" 
+                    FontSize="30" 
+                    TextColor="Black"
+                    FontAttributes="Bold" 
+                    HorizontalOptions="Center" />
+                <Label 
+                    Text="トゥワイス" 
+                    FontSize="15" 
+                    TextColor="Black"
+                    FontAttributes="Bold" 
+                    VerticalTextAlignment="End"
+                    HorizontalOptions="Center" />
+            </HorizontalStackLayout>
+            <CollectionView 
+                x:Name="MemberList" 
+                SelectionMode="Single" 
+                SelectionChanged="OnMemberSelected"
+                Margin="0,30,0,0">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout 
+                        Orientation="Vertical" 
+                        Span="3" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame 
+                                Padding="5" 
+                                CornerRadius="10"
+                                BackgroundColor="Transparent"
+                                BorderColor="Transparent">
+                            <StackLayout HorizontalOptions="Center">
+                                <Image 
+                                        Source="{Binding ImageSource}" 
+                                        HeightRequest="100" 
+                                        WidthRequest="100" 
+                                        Aspect="AspectFill">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer 
+                                            Tapped="OnImageTapped" 
+                                            CommandParameter="{Binding}" />
+                                    </Image.GestureRecognizers>
+                                </Image>
+                                <Label 
+                                    Text="{Binding Name}" 
+                                    TextColor="Black"
+                                    FontAttributes="Bold" 
+                                    HorizontalOptions="Center" />
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Button 
+                Text="Add Member" 
+                Clicked="OnAddMemberClicked" 
+                BackgroundColor="#F34C83" 
+                CornerRadius="20"
+                TextColor="White" 
+                Margin="20" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
