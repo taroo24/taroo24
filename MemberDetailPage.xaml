@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KielApp.MemberDetailPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#FFA15B">
+
+    <ScrollView>
+        <StackLayout 
+            Padding="20">
+            <Image 
+                Source="{Binding ImageSource}"
+                HeightRequest="200" 
+                Aspect="AspectFill"
+                WidthRequest="200"/>
+            <Label 
+                Text="{Binding Bio}" 
+                TextColor="Black"
+                FontSize="16" />
+            <Label 
+                Text="{Binding Hometown}"
+                TextColor="Black"/>
+            <Label 
+                Text="{Binding Birthday}"
+                TextColor="Black"/>
+            <Label 
+                Text="{Binding ZodiacSign}"
+                TextColor="Black"/>
+            <Button 
+                Text="Save" 
+                Clicked="OnSaveClicked" 
+                BackgroundColor="#F34C83" 
+                TextColor="White"
+                Margin="0,20"/>
+            <Button 
+                Text="Delete" 
+                Clicked="OnDeleteClicked" 
+                BackgroundColor="#F34C83" 
+                TextColor="White" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
