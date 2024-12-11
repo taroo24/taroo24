@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KielApp.MainPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#FFA15B" >
+    <VerticalStackLayout
+        VerticalOptions="Center">
+        <Image
+            Source="twicelogo.png"
+            HeightRequest="200" 
+            HorizontalOptions="Center"/>
+        <Label 
+            Text="One in a million, TWICE!"              
+            FontSize="24"             
+            FontAttributes="Bold"             
+            TextColor="#F34C83"             
+            HorizontalOptions="Center"               
+            Margin="0,20,0,0"/>
+        <Label 
+            Text="    Dive into the heart of TWICE with our app, where you can discover in-depth member bios and the stories behind their music!"                  
+            FontSize="16"             
+            TextColor="#F34C83"            
+            HorizontalOptions="Center"             
+            Margin="50"/>
+        <Button 
+            Text="Proceed"                
+            BackgroundColor="#F34C83"
+            TextColor="White"               
+            HorizontalOptions="Center"            
+            WidthRequest="200"            
+            CornerRadius="30"               
+            FontSize="18"               
+            Clicked="OnProceedClicked"/>
+    </VerticalStackLayout>
+</ContentPage>
