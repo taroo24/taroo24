@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KielApp.IntroductionPage"
+             Title="IntroductionPage">
+    <ScrollView>
+        <StackLayout>
+            <Image Source="group.png" HeightRequest="300" />
+            <Label Text="TWICE Introduction..." TextColor="Black" FontSize="16" Margin="20"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
